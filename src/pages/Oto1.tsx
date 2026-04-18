@@ -1,8 +1,8 @@
 import { OtoPage } from "@/components/OtoPage";
 import { LayoutDashboard, Calendar, Workflow, PlayCircle, Link2 } from "lucide-react";
 
-const OTO1_YES_URL = "[OTO1_YES_URL]";
-const OTO1_NO_URL = "[OTO1_NO_URL]";
+const OTO1_YES_URL = "https://buy.stripe.com/fZu5kFbbmcAlc95cQc8EM04";
+const OTO1_NO_URL = "/oto2";
 
 const Oto1 = () => (
   <OtoPage

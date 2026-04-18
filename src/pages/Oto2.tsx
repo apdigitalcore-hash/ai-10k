@@ -1,8 +1,8 @@
 import { OtoPage } from "@/components/OtoPage";
 import { GraduationCap, BookOpen, FileText, Video, Users } from "lucide-react";
 
-const OTO2_YES_URL = "[OTO2_YES_URL]";
-const OTO2_NO_URL = "[OTO2_NO_URL]";
+const OTO2_YES_URL = "https://buy.stripe.com/eVqbJ35R2fMx7SPg2o8EM05";
+const OTO2_NO_URL = "/thank-you?from_oto=true";
 
 const Oto2 = () => (
   <OtoPage

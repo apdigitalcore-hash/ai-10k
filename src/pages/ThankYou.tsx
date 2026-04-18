@@ -72,7 +72,8 @@ const ThankYou = () => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const sessionId = params.get("session_id");
-    if (!sessionId || !sessionId.startsWith("cs_")) {
+    const fromOto = params.get("from_oto");
+    if (!fromOto && (!sessionId || !sessionId.startsWith("cs_"))) {
       window.location.replace("/");
     }
   }, []);
