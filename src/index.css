@@ -46,6 +46,7 @@
     --coral: 351 78% 60%;
     --gold: 40 91% 51%;
     --cream: 43 33% 96%;
+    --success: 145 63% 42%;
 
     --shadow-cta: 0 14px 30px -10px hsl(var(--coral) / 0.55);
     --shadow-card: 0 12px 40px -16px hsl(var(--navy) / 0.18);
