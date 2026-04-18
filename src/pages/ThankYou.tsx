@@ -7,8 +7,6 @@ import {
   Sparkles,
   Bookmark,
   Lock,
-  Users,
-  DollarSign,
   PartyPopper,
 } from "lucide-react";
 
@@ -249,48 +247,7 @@ const ThankYou = () => {
         </div>
       </section>
 
-      {/* SECTION 4 — COMMUNITY */}
-      <section className="bg-navy text-cream px-5 sm:px-8 py-20 sm:py-24 text-center">
-        <div className="max-w-2xl mx-auto">
-          <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-3xl">
-            <Users className="h-7 w-7 text-gold" />
-          </div>
-          <h2 className="mt-6 text-3xl sm:text-5xl">Join the Private Buyer Community</h2>
-          <p className="mt-5 text-lg text-cream/80 leading-relaxed">
-            Get feedback on your prompts, share what's working, and connect with other business
-            owners using AI to grow. Free for buyers.
-          </p>
-          <a
-            href={CONFIG.COMMUNITY_URL}
-            className="mt-10 inline-flex items-center justify-center gap-2 rounded-xl border-2 border-gold text-gold px-8 py-4 font-bold text-base sm:text-lg hover:bg-gold hover:text-navy transition-colors duration-300"
-          >
-            <Users className="h-5 w-5" /> JOIN THE COMMUNITY
-          </a>
-        </div>
-      </section>
-
-      {/* SECTION 5 — AFFILIATE */}
-      <section className="px-5 sm:px-8 py-20 sm:py-24 bg-cream">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-coral/15 text-coral">
-            <DollarSign className="h-6 w-6" />
-          </div>
-          <h2 className="mt-5 text-3xl sm:text-5xl text-navy">Love it? Earn 50% Per Sale.</h2>
-          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            Share your unique link. Every time someone buys through it, you earn{" "}
-            <span className="font-bold text-navy">$4.50</span>. No audience required — just share
-            what's working for you.
-          </p>
-          <a href={CONFIG.AFFILIATE_URL} className="cta-btn mt-10 text-base sm:text-lg !px-10 !py-5">
-            GET MY AFFILIATE LINK
-          </a>
-          <p className="mt-4 text-xs text-muted-foreground">
-            Commissions paid weekly. No approval needed.
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION 6 — 7-DAY CHALLENGE */}
+      {/* SECTION 4 — 7-DAY CHALLENGE */}
       <section className="px-5 sm:px-8 py-20 sm:py-24">
         <div className="max-w-3xl mx-auto">
           <div className="text-center">
