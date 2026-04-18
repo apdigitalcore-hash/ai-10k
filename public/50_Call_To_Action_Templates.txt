@@ -1,0 +1,101 @@
+================================================================
+50 CALL TO ACTION TEMPLATES
+Bonus Resource for: The $10K AI Employee
+================================================================
+Copy-paste ready CTAs organized by conversion goal.
+Customize the [brackets] with your specific details.
+Use across emails, social media, landing pages, and DMs.
+================================================================
+
+
+--- SECTION 1: GET A CLICK (10) ---
+Use for: Blog posts, email newsletters, social media links, ads
+
+1. Click the link below to see exactly how I did it.
+2. Read the full breakdown here — it's worth 3 minutes of your time.
+3. Tap the link in my bio for the free [resource name].
+4. The full step-by-step is at the link — no opt-in required.
+5. Want the template? I put it here: [link]
+6. See the before-and-after results for yourself — link below.
+7. The complete guide is live. Go get it here: [link]
+8. I broke down the entire process at the link in my bio.
+9. Details, examples, and the exact script are all here: [link]
+10. Don't let this sit in your feed. Click through and actually use it.
+
+
+--- SECTION 2: BOOK A CALL (10) ---
+Use for: Sales pages, DMs, email sequences, LinkedIn outreach
+
+11. If this sounds like where you are, let's talk. Book a free 20-minute call here: [link]
+12. I have two spots open this week. Grab one before they're gone: [link]
+13. Not sure if we're a fit? That's exactly what the call is for. Book here: [link]
+14. One conversation can change the direction of your business. Schedule yours: [link]
+15. I'll map out a 90-day plan with you — completely free. Calendar is here: [link]
+16. Stop figuring this out alone. Let's get on a call and build your roadmap together: [link]
+17. If you're serious about [specific outcome], reply "CALL" and I'll send you the link.
+18. Limited availability this month. Click here to claim your strategy session: [link]
+19. The call is 30 minutes, no pitch — just clarity. Book it here: [link]
+20. Ready to go from [current state] to [desired outcome]? Let's map it out: [link]
+
+
+--- SECTION 3: DOWNLOAD / OPT-IN (10) ---
+Use for: Lead magnets, freebies, email list growth, content upgrades
+
+21. Download the free [resource] and start using it today: [link]
+22. Get your copy instantly — no fluff, no spam, just value: [link]
+23. Drop your email below and I'll send the [template/checklist/guide] right now.
+24. It's free. It's useful. Grab it here: [link]
+25. Join [number] business owners who already have this resource: [link]
+26. Enter your email and get the [resource name] delivered in under 60 seconds.
+27. The [resource] is free — click here and it's yours immediately: [link]
+28. Save yourself [time/money/frustration]. Download the free [name] here: [link]
+29. Subscribe to get this [resource] plus a new one every [week/month]: [link]
+30. I made this free because every business owner needs it. Get it here: [link]
+
+
+--- SECTION 4: BUY NOW (10) ---
+Use for: Sales pages, cart abandonment emails, launch sequences, DMs
+
+31. Get instant access to [product name] for just $[price] — click here: [link]
+32. $[price] today. Potentially [outcome] by [timeframe]. That math works: [link]
+33. The price goes up [Friday/at midnight]. Lock in your spot now: [link]
+34. Join [number] business owners inside [product name]: [link]
+35. This is the last time I'm offering this at $[price]. Grab it before it closes: [link]
+36. If you've read this far, you already know you need this. Get it here: [link]
+37. [Product name] — $[price], instant access, no fluff: [link]
+38. Stop waiting for the "right time." The right time cost you [X] already. Buy here: [link]
+39. Everything you need to [specific outcome] is inside. Get access now: [link]
+40. One purchase. Lifetime access. Immediate results. Here's the link: [link]
+
+
+--- SECTION 5: ENGAGE / COMMENT (10) ---
+Use for: Social media posts, newsletters, community building, polls
+
+41. Drop a "YES" in the comments if this hit home.
+42. Tell me in the comments — what's the biggest bottleneck in your business right now?
+43. Which of these do you struggle with most? Comment below.
+44. Tag someone who needs to see this today.
+45. Save this post. You'll want to come back to it.
+46. Reply to this email and tell me: where are you stuck?
+47. What's your biggest takeaway? Drop it below — I read every comment.
+48. Share this with one person in your network who's building a business.
+49. Comment "GUIDE" and I'll send you the full breakdown for free.
+50. Repost this if you think your audience needs to hear it.
+
+
+================================================================
+PRO TIPS FOR STRONGER CTAS:
+
+1. One CTA per piece of content — don't give people 3 options.
+2. Use urgency honestly: real deadlines close more than fake ones.
+3. Micro-commitments work: "Comment YES" is easier than "Buy now."
+4. The best CTA restates the benefit, then asks for the action.
+5. Match the CTA energy to where the reader is: cold traffic needs
+   low-commitment CTAs; warm audiences can handle a direct buy now.
+
+CUSTOMIZATION SHORTCUT (using Claude):
+Paste any CTA from this list into Claude and say:
+"Rewrite this CTA for a [type of business] selling [product/service]
+to [target audience]. Keep it under 2 sentences."
+================================================================
+END OF FILE

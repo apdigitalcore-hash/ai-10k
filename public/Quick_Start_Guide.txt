@@ -1,0 +1,362 @@
+================================================================
+QUICK START GUIDE
+The $10K AI Employee: 50 Claude AI Prompts for Business Owners
+================================================================
+Welcome. You now have one of the most practical AI resources
+available for running a service business. This guide will show
+you exactly how to get the most out of your new playbook — fast.
+
+Read this guide first. Then open the main PDF. Then run your
+first prompt within the next 20 minutes.
+================================================================
+
+
+SECTION 1: HOW TO READ THE PLAYBOOK
+------------------------------------------------------------
+The $10K AI Employee is organized into 5 sections of 10 prompts
+each. Here's what's in each section and when to use it:
+
+SECTION 1 — MARKETING PROMPTS (Prompts 1-10)
+Use when: You need content, copy, messaging, or campaign ideas.
+Best for: Writing social posts, emails, lead magnets, ad copy,
+content calendars, and brand positioning.
+
+SECTION 2 — SALES PROMPTS (Prompts 11-20)
+Use when: You're writing proposals, following up with leads,
+or need DM scripts and objection-handling language.
+Best for: Sales pages, discovery call prep, closing emails,
+offer positioning, and conversion copy.
+
+SECTION 3 — CONTENT CREATION PROMPTS (Prompts 21-30)
+Use when: You need to produce large volumes of content quickly.
+Best for: Blog posts, newsletters, YouTube scripts, podcast
+outlines, repurposing existing content into new formats.
+
+SECTION 4 — OPERATIONS & SYSTEMS PROMPTS (Prompts 31-40)
+Use when: You need to document processes, create SOPs, build
+client deliverables, or automate repeatable workflows.
+Best for: Onboarding materials, internal SOPs, project briefs,
+meeting summaries, client reports, and team documentation.
+
+SECTION 5 — STRATEGY & GROWTH PROMPTS (Prompts 41-50)
+Use when: You're making big-picture decisions about your
+business direction, pricing, audience, or offers.
+Best for: Niche positioning, offer development, competitive
+analysis, 90-day planning, and revenue modeling.
+
+READING TIP: Don't read it cover to cover. Scan the section
+headers, identify your #1 current bottleneck, and start there.
+----------------------------------------------------------------
+
+
+SECTION 2: YOUR FIRST 3 PROMPTS TO RUN
+------------------------------------------------------------
+These three prompts will immediately demonstrate what Claude can
+do for your business. Run all three before doing anything else.
+
+--- FIRST PROMPT: MARKETING ---
+Purpose: Create a week of social content in under 10 minutes.
+
+Paste this into Claude (fill in your details):
+
+"I run a [type of business]. I help [ideal client] achieve
+[specific result]. My tone is [professional/casual/bold/warm].
+
+Create 5 social media posts for this week:
+- Monday: Educational tip related to [your topic]
+- Tuesday: Story-based post about a client win or personal experience
+- Wednesday: A contrarian take or opinion post in my niche
+- Thursday: An engagement question to spark comments
+- Friday: A soft pitch for [your main offer or lead magnet]
+
+Each post should be 150-250 words, end with a CTA, and sound
+like a real person — not a robot. Use short paragraphs."
+
+--- SECOND PROMPT: SALES ---
+Purpose: Write a follow-up email that re-engages cold leads.
+
+"I had a discovery call with a potential client 2 weeks ago.
+They were interested in [your service] but went quiet after I
+sent the proposal. Their main goal was [goal] and their main
+concern was [concern or objection].
+
+Write a follow-up email that:
+- Opens with a genuine, non-desperate tone
+- References something specific from our conversation
+- Provides one new piece of value or insight
+- Ends with a low-pressure invitation to reconnect
+- Is under 200 words and feels human
+
+My service is [description] and the investment is [$amount]."
+
+--- THIRD PROMPT: CONTENT ---
+Purpose: Turn one idea into a full month of content.
+
+"I want to create a full month of content around this single idea:
+[paste your idea, topic, or core message here]
+
+From this one idea, generate:
+1. A long-form LinkedIn post or blog intro (300 words)
+2. 4 short social media posts (under 100 words each)
+3. An email newsletter (250 words)
+4. A 5-point Twitter/X thread
+5. A YouTube or podcast episode outline with title and 5 talking points
+6. A lead magnet idea that ties directly to this topic
+
+Keep the tone [your tone]. Make every piece feel distinct — not
+like the same thing reformatted."
+----------------------------------------------------------------
+
+
+SECTION 3: HOW TO CUSTOMIZE PROMPTS FOR YOUR BUSINESS
+------------------------------------------------------------
+Every prompt in the playbook uses placeholder brackets like
+[your niche], [ideal client], and [desired outcome]. Here's
+how to fill them in so outputs are specific, not generic.
+
+THE 5 VARIABLES TO ALWAYS INCLUDE:
+
+1. YOUR ROLE: What you do and how you describe yourself.
+   Bad: "I'm a coach"
+   Good: "I'm a mindset and business coach for women leaving
+   corporate jobs to start their own consulting businesses"
+
+2. YOUR IDEAL CLIENT: The more specific, the better the output.
+   Bad: "small business owners"
+   Good: "female service business owners in their 30s-40s who
+   are making $3K-$7K/month and want to reach $15K/month
+   without working more hours"
+
+3. THEIR PAIN: The real problem they want solved.
+   Bad: "they're struggling with marketing"
+   Good: "they post consistently but don't generate leads.
+   They're getting engagement but no one's buying."
+
+4. YOUR OFFER: What you sell and what it costs.
+   Be specific: name, format, price, duration, deliverables.
+
+5. TONE AND VOICE: How you want to sound.
+   Options: professional, warm, direct, conversational,
+   bold, educational, motivational, no-nonsense.
+
+PRO TIP — Build a Context Block:
+Write a 5-10 sentence paragraph describing your business once.
+Save it as a note. Paste it at the top of every Claude prompt.
+You'll never have to re-explain your business again.
+
+Example Context Block:
+"[Your name] is a [role] who helps [ideal client] achieve
+[result] through [your method/offer]. Their tone is [tone].
+Their ideal client is [description]. Their main offer is
+[offer name], priced at [$X], delivered [format]. Their
+biggest differentiator is [what makes you different]."
+----------------------------------------------------------------
+
+
+SECTION 4: PROMPT STACKING TECHNIQUE
+------------------------------------------------------------
+Prompt stacking is the practice of feeding the output of one
+Claude prompt directly into the next — compounding the value
+of each response and building toward a complete deliverable.
+
+HOW IT WORKS:
+Step 1: Run Prompt A. Get the output.
+Step 2: Copy the output.
+Step 3: Start a new prompt with: "Using the content below as
+your source material, [new instruction]..." then paste the output.
+
+REAL EXAMPLE — BUILDING A SALES EMAIL FROM A SOCIAL POST:
+
+Prompt 1 (Content): "Write a LinkedIn post about [topic] from
+the perspective of a [your role]. Make it story-based, 200 words,
+and end with a hook to learn more."
+
+(Claude writes the post. Copy it.)
+
+Prompt 2 (Sales): "Using the post below as your source material,
+expand it into a full sales email. Keep the story intact but add:
+- A more specific pain point in paragraph 2
+- Social proof (you can use placeholder client results)
+- A clear offer description
+- A CTA to [your call-to-action]
+Keep it under 400 words. [Paste post here]"
+
+(Claude writes the email. Copy it.)
+
+Prompt 3 (Ads): "Using the email below, extract the single most
+compelling line or idea and turn it into 3 Facebook or Instagram
+ad hooks (under 3 sentences each). [Paste email here]"
+
+Three outputs. One core idea. 15 minutes of work.
+
+MORE STACKING IDEAS:
+- Blog post → Email newsletter → Social post series
+- Discovery call notes → Proposal → Follow-up email
+- Client testimonial → Case study → Social proof ad
+- Podcast transcript → Blog post → LinkedIn article → Tweet thread
+- One offer → Full sales page → Email sequence → DM script
+----------------------------------------------------------------
+
+
+SECTION 5: COMMON MISTAKES TO AVOID
+------------------------------------------------------------
+MISTAKE 1: Being too vague in your prompts.
+Fix: Add context, specificity, and examples. Claude produces
+better output when it knows who you are and who you're talking to.
+
+MISTAKE 2: Accepting the first draft as final.
+Fix: Always ask Claude to "revise this to be more [direct/personal/
+punchy/specific]. Here's what's missing: [describe the gap]."
+The second and third drafts are almost always significantly better.
+
+MISTAKE 3: Using Claude without a persona.
+Fix: Start every session with your Context Block (see Section 3).
+Treat Claude like a new team member who needs a brief — because it does.
+
+MISTAKE 4: Generating content that sounds like AI.
+Telltale signs: "Delve into", "In today's fast-paced world",
+"It's important to note", "Leverage", "Game-changer."
+Fix: Add to every prompt: "Write in plain, conversational language.
+Avoid corporate buzzwords and AI-sounding filler phrases. Sound
+like a real person talking to a peer."
+
+MISTAKE 5: Running one prompt and stopping.
+Fix: Use the prompt stacking technique. One good output becomes
+10 great assets with 3 follow-up prompts.
+
+MISTAKE 6: Not saving good outputs.
+Fix: Keep a running Google Doc of Claude outputs that worked.
+This becomes your personal content swipe file over time.
+
+MISTAKE 7: Asking Claude to do too many things in one prompt.
+Fix: Break complex tasks into smaller prompts. "Write my entire
+marketing strategy" produces generic output. "Write the positioning
+statement for my [offer] targeting [audience]" produces a gem.
+----------------------------------------------------------------
+
+
+SECTION 6: PRO TIPS FOR BETTER CLAUDE OUTPUTS
+------------------------------------------------------------
+TIP 1 — GIVE IT A ROLE
+Open every prompt with: "You are an expert [copywriter/
+strategist/sales coach/etc.] who specializes in [niche]."
+This primes Claude to respond with the right expertise level.
+
+TIP 2 — SPECIFY THE FORMAT
+Tell Claude exactly how you want the output structured:
+"Write this as a numbered list." / "Use short paragraphs under
+3 sentences." / "Format with headers for each section." /
+"Output this as a table with columns for [X, Y, Z]."
+
+TIP 3 — SET THE WORD COUNT
+"Keep this under 200 words" or "Write at least 500 words" gives
+Claude boundaries that improve output quality dramatically.
+
+TIP 4 — USE REAL EXAMPLES
+"Here's an example of content I've written that I liked: [paste
+example]. Match this tone and style." This is the fastest way to
+get outputs that actually sound like you.
+
+TIP 5 — ASK FOR OPTIONS
+"Give me 5 different versions of this headline, ranging from
+direct to emotional to curiosity-based." Then pick the best one
+or combine elements from multiple versions.
+
+TIP 6 — CRITIQUE AND REVISE IN THE SAME CHAT
+You don't need to start a new conversation every time. After an
+output, say: "This is good but [specific issue]. Rewrite section
+2 to be more direct and remove the last paragraph entirely."
+Claude holds context within the conversation.
+
+TIP 7 — ASK CLAUDE TO THINK LIKE YOUR CLIENT
+"Before you write this, describe what my ideal client is thinking
+and feeling when they encounter this content. Then write it for
+that emotional state." The output becomes dramatically more targeted.
+
+TIP 8 — ADD NEGATIVE CONSTRAINTS
+Tell Claude what NOT to do: "Do not use motivational language. Do
+not end with a question. Do not mention AI tools. Do not use bullet
+points — write in full paragraphs only."
+Negative constraints often produce the most distinctive outputs.
+----------------------------------------------------------------
+
+
+SECTION 7: 7-DAY ACTION PLAN
+------------------------------------------------------------
+One focused task per day. Each one moves your business forward
+and builds on the day before.
+
+DAY 1 — FOUNDATION (30 minutes)
+Task: Write your Context Block (see Section 3).
+This is the paragraph that describes your business, your client,
+your offer, and your tone. Save it somewhere accessible.
+Then run First Prompt #1 (Marketing) with your full context.
+Output: Your first week of social content — done.
+
+DAY 2 — SALES ASSET (45 minutes)
+Task: Use Prompts 11-15 to build or rewrite one sales asset.
+Choose from: a sales page, a discovery call script, a proposal
+template, or a follow-up email sequence.
+Output: A ready-to-deploy sales tool that converts better than
+what you're currently using.
+
+DAY 3 — CONTENT ENGINE (30 minutes)
+Task: Run First Prompt #3 (Content Multiplication) on your
+most important business topic or offer.
+Output: A full month of content in multiple formats — ready to
+schedule, send, or post.
+
+DAY 4 — OPERATIONS CLEANUP (45 minutes)
+Task: Use Prompts 31-40 to systematize one recurring task.
+Options: write a client onboarding SOP, document your service
+delivery process, create a new client welcome email, or
+draft a standard scope-of-work template.
+Output: A system that saves you time every single week going forward.
+
+DAY 5 — LEAD GENERATION ASSET (60 minutes)
+Task: Pick one lead magnet from your "20 Lead Magnet Blueprints"
+bonus. Use Claude to write the full content.
+Prompt: "Build out the complete content for this lead magnet:
+[name and description]. Make it specific, practical, and
+immediately useful for [ideal client]. Use my Context Block
+below: [paste context block]"
+Output: A complete, ready-to-format lead magnet PDF.
+
+DAY 6 — OFFER SHARPENING (30 minutes)
+Task: Use Prompts 41-50 to sharpen your core offer or create
+a new one. Focus on: positioning, pricing, or the value stack.
+Run this prompt: "Review my current offer: [describe it].
+Identify 3 ways I could reposition it to feel more premium,
+more specific, or more urgent. Then rewrite the offer
+description using the improvements."
+Output: A stronger offer that commands higher prices.
+
+DAY 7 — REVIEW AND STACK (30 minutes)
+Task: Collect the best outputs from Days 1-6.
+Use prompt stacking to connect them:
+- Turn your Day 3 content into a nurture email sequence
+- Turn your Day 5 lead magnet into an opt-in page headline
+- Turn your Day 6 offer rewrite into a social proof post
+Output: A cohesive system where your content, offers, and
+lead generation all reinforce each other.
+
+---
+
+After Day 7, you have:
+- A week of social content posted
+- A stronger sales asset deployed
+- 30 days of content queued
+- One operational system documented
+- A lead magnet built and ready
+- A sharper offer that commands more
+- A fully connected content and sales ecosystem
+
+That is not a small thing. That is a business transformation
+that most people take months to build. You built it in 7 days
+with 50 prompts and a $9 PDF.
+
+Now go run the first prompt.
+================================================================
+END OF QUICK START GUIDE
+The $10K AI Employee — ap-digital.ca
+================================================================

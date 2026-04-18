@@ -14,11 +14,11 @@ import {
 
 const CONFIG = {
   PDF_DOWNLOAD_URL: "/The_10K_AI_Employee.pdf",
-  BONUS_HOOKS_URL: "[BONUS_HOOKS_URL]",
-  BONUS_CTA_URL: "[BONUS_CTA_URL]",
-  BONUS_OFFERS_URL: "[BONUS_OFFERS_URL]",
-  BONUS_MAGNETS_URL: "[BONUS_MAGNETS_URL]",
-  BONUS_QUICKSTART_URL: "[BONUS_QUICKSTART_URL]",
+  BONUS_HOOKS_URL: "/100_Viral_Hooks_Swipe_File.txt",
+  BONUS_CTA_URL: "/50_Call_To_Action_Templates.txt",
+  BONUS_OFFERS_URL: "/25_Irresistible_Offer_Ideas.txt",
+  BONUS_MAGNETS_URL: "/20_Lead_Magnet_Blueprints.txt",
+  BONUS_QUICKSTART_URL: "/Quick_Start_Guide.txt",
   COMMUNITY_URL: "[COMMUNITY_URL]",
   AFFILIATE_URL: "[AFFILIATE_URL]",
 };
