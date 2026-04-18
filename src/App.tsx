@@ -10,6 +10,10 @@ import Oto2 from "./pages/Oto2.tsx";
 import Downsell from "./pages/Downsell.tsx";
 import ThankYou from "./pages/ThankYou.tsx";
 import Calculator from "./pages/Calculator.tsx";
+import Waitlist from "./pages/Waitlist.tsx";
+import Dashboard from "./pages/Dashboard.tsx";
+import CarouselGenerator from "./pages/CarouselGenerator.tsx";
+import LaunchTracker from "./pages/LaunchTracker.tsx";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +30,10 @@ const App = () => (
           <Route path="/downsell" element={<Downsell />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/calculator" element={<Calculator />} />
+          <Route path="/waitlist" element={<Waitlist />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/carousel" element={<CarouselGenerator />} />
+          <Route path="/launch-tracker" element={<LaunchTracker />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
