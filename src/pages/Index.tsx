@@ -493,8 +493,8 @@ const Index = () => {
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-cream transition-colors">Privacy</a>
             <a href="#" className="hover:text-cream transition-colors">Terms</a>
-            <a href="mailto:support@apdigital.co" className="hover:text-cream transition-colors">
-              support@apdigital.co
+            <a href="mailto:apdigital.core@gmail.com" className="hover:text-cream transition-colors">
+              apdigital.core@gmail.com
             </a>
           </div>
           <div className="text-xs text-cream/50">

@@ -765,7 +765,7 @@ const LaunchTracker = () => {
       </main>
 
       <footer className="bg-navy-deep text-cream/70 px-5 sm:px-8 py-10 text-center text-sm mt-12">
-        © {new Date().getFullYear()} AP Digital · support@apdigital.co
+        © {new Date().getFullYear()} AP Digital · apdigital.core@gmail.com
       </footer>
     </div>
   );
