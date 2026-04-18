@@ -21,7 +21,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-const CHECKOUT_URL = "[CHECKOUT_URL]";
+const CHECKOUT_URL = "https://buy.stripe.com/aFa5kF5R27g1flhg2o8EM03";
 
 const categories = [
   {
