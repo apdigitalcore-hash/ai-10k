@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 const CONFIG = {
-  PDF_DOWNLOAD_URL: "[PDF_DOWNLOAD_URL]",
+  PDF_DOWNLOAD_URL: "/The_10K_AI_Employee.pdf",
   BONUS_HOOKS_URL: "[BONUS_HOOKS_URL]",
   BONUS_CTA_URL: "[BONUS_CTA_URL]",
   BONUS_OFFERS_URL: "[BONUS_OFFERS_URL]",
