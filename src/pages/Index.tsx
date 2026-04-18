@@ -143,8 +143,8 @@ const testimonials = [
 
 const faqs = [
   {
-    q: "Does this work with free ChatGPT?",
-    a: "Yes. Every agent is plain-text and works in free ChatGPT, ChatGPT Plus, Claude, Gemini, or any other LLM. No API keys, no plugins, no setup.",
+    q: "Does this work with free Claude?",
+    a: "Yes. Every agent is plain-text and works in free Claude, Claude Pro, ChatGPT, Gemini, or any other LLM. No API keys, no plugins, no setup.",
   },
   {
     q: "Is this just a list of basic prompts?",
@@ -217,7 +217,7 @@ const Index = () => {
             <p className="reveal mt-6 text-lg sm:text-2xl text-cream/80 max-w-2xl mx-auto leading-relaxed">
               <span className="font-semibold text-cream">50 AI agents that work while you sleep.</span>{" "}
               Copy. Paste. Profit. A 40-page playbook for business owners, freelancers, and creators
-              who are done wasting hours on blank ChatGPT prompts.
+              who are done wasting hours on blank Claude prompts.
             </p>
             <div className="reveal mt-10 flex flex-col items-center gap-4">
               <a href={CHECKOUT_URL} className="cta-btn text-base sm:text-xl !px-10 !py-5">
@@ -235,11 +235,11 @@ const Index = () => {
         <section className="section-pad container-tight">
           <h2 className="reveal text-3xl sm:text-5xl text-navy max-w-3xl">
             You know AI can change your business.{" "}
-            <span className="text-coral">So why are you staring at a blank ChatGPT prompt?</span>
+            <span className="text-coral">So why are you staring at a blank Claude prompt?</span>
           </h2>
           <div className="reveal mt-10 space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
             <p>
-              You opened ChatGPT to write that sales page. Forty minutes later you have three
+              You opened Claude to write that sales page. Forty minutes later you have three
               versions of corporate-flavored oatmeal and a tab full of YouTube tutorials about
               "prompt engineering." The page is still not written.
             </p>
@@ -364,7 +364,7 @@ const Index = () => {
                   "You're a business owner tired of trading time for revenue.",
                   "You're a freelancer who wants to deliver agency-level work solo.",
                   "You're a creator who needs content output without burning out.",
-                  "You use ChatGPT and keep getting bland, useless results.",
+                  "You use Claude and keep getting bland, useless results.",
                   "You want working templates — not another 12-hour theory course.",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-3">
@@ -403,7 +403,7 @@ const Index = () => {
           <div className="reveal text-center max-w-2xl mx-auto">
             <p className="text-coral font-bold tracking-[0.2em] text-xs">RECEIPTS</p>
             <h2 className="mt-3 text-4xl sm:text-5xl text-navy">
-              500+ buyers. Zero ChatGPT-shaped oatmeal.
+              500+ buyers. Zero Claude-shaped oatmeal.
             </h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -466,7 +466,7 @@ const Index = () => {
               or keep paying in hours.
             </h2>
             <p className="reveal mt-6 text-lg sm:text-xl text-cream/80 max-w-2xl mx-auto">
-              Download the PDF. Open ChatGPT. Paste your first agent. Ship something real before
+              Download the PDF. Open Claude. Paste your first agent. Ship something real before
               your coffee gets cold.
             </p>
             <a href={CHECKOUT_URL} className="reveal cta-btn mt-10 text-base sm:text-xl !px-12 !py-6">

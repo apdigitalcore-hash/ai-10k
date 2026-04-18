@@ -35,7 +35,7 @@ const steps = [
   {
     n: "02",
     icon: Sparkles,
-    title: "Paste Prompt #1 into ChatGPT",
+    title: "Paste Prompt #1 into Claude",
     desc: "Free tier works perfectly. Copy the prompt, fill in your product name, hit enter.",
   },
   {
