@@ -70,6 +70,15 @@ const challenge = [
 ];
 
 const ThankYou = () => {
+  // ── Gate: bounce non-buyers back to sales page ──────────────────────────
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get("session_id");
+    if (!sessionId || !sessionId.startsWith("cs_")) {
+      window.location.replace("/");
+    }
+  }, []);
+
   const [checked, setChecked] = useState<boolean[]>(() => {
     if (typeof window === "undefined") return new Array(7).fill(false);
     try {
