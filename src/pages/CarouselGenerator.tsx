@@ -1,31 +1,166 @@
 import { useRef, useState } from "react";
-import { toPng } from "html-to-image";
 import { Download, ImageIcon, Sparkles } from "lucide-react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-interface SlideProps {
-  type: "hook" | "point" | "cta";
-  index?: number;
+type SlideType = "hook" | "point" | "cta";
+
+interface Slide {
+  id: string;
+  label: string;
+  type: SlideType;
   text: string;
-  handle: string;
-  watermark?: boolean;
+  index?: number;
 }
 
-// ─── Slide renderer (DOM div — used both for preview and PNG capture) ─────────
+// ─── Brand tokens ─────────────────────────────────────────────────────────────
 
-function SlideView({ type, index, text, handle }: SlideProps) {
-  if (type === "cta") {
+const NAVY      = "#1A1A2E";
+const NAVY_DEEP = "#0F0F1E";
+const CORAL     = "#E94560";
+const GOLD      = "#F3A712";
+const WHITE     = "#FFFFFF";
+
+// Canvas dimensions (1080×1350 = Instagram 4:5)
+const W = 1080;
+const H = 1350;
+
+// ─── Canvas renderer ─────────────────────────────────────────────────────────
+
+function drawSlide(
+  ctx: CanvasRenderingContext2D,
+  slide: Slide,
+  handle: string
+) {
+  ctx.clearRect(0, 0, W, H);
+
+  if (slide.type === "cta") {
+    // Coral background
+    ctx.fillStyle = CORAL;
+    ctx.fillRect(0, 0, W, H);
+
+    // CTA text
+    ctx.fillStyle = WHITE;
+    ctx.font = "bold 72px Inter, Arial, sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    wrapText(ctx, slide.text || "Save this. Follow @apdigital. Link in bio.", W / 2, H / 2, W - 120, 90);
+
+    // Watermark
+    ctx.font = "bold 36px Inter, Arial, sans-serif";
+    ctx.fillStyle = "rgba(255,255,255,0.5)";
+    ctx.textAlign = "right";
+    ctx.textBaseline = "bottom";
+    ctx.fillText(handle || "@apdigital", W - 48, H - 48);
+    return;
+  }
+
+  // Dark gradient background
+  const grad = ctx.createLinearGradient(0, 0, W, H);
+  grad.addColorStop(0, NAVY_DEEP);
+  grad.addColorStop(1, NAVY);
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, W, H);
+
+  if (slide.type === "hook") {
+    // Gold top bar
+    ctx.fillStyle = GOLD;
+    ctx.fillRect(0, 0, W, 12);
+
+    // Hook text centred
+    ctx.fillStyle = WHITE;
+    ctx.font = "900 80px Inter, Arial, sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    wrapText(ctx, slide.text || "Your hook goes here", W / 2, H / 2, W - 120, 100);
+  } else {
+    // Point number
+    ctx.font = "900 180px Inter, Arial, sans-serif";
+    ctx.fillStyle = CORAL;
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
+    ctx.fillText(String(slide.index ?? ""), 72, 80);
+
+    // Divider line
+    ctx.strokeStyle = "rgba(255,255,255,0.1)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(72, 290);
+    ctx.lineTo(W - 72, 290);
+    ctx.stroke();
+
+    // Point text
+    ctx.fillStyle = WHITE;
+    ctx.font = "bold 72px Inter, Arial, sans-serif";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
+    wrapText(ctx, slide.text || `Point ${slide.index ?? ""} goes here`, 72, 340, W - 144, 90);
+  }
+
+  // Watermark bottom-right
+  ctx.font = "bold 32px Inter, Arial, sans-serif";
+  ctx.fillStyle = `${GOLD}99`;
+  ctx.textAlign = "right";
+  ctx.textBaseline = "bottom";
+  ctx.fillText("AP Digital", W - 48, H - 48);
+}
+
+// Multi-line text wrap helper
+function wrapText(
+  ctx: CanvasRenderingContext2D,
+  text: string,
+  x: number,
+  y: number,
+  maxWidth: number,
+  lineHeight: number
+) {
+  const words = text.split(" ");
+  let line = "";
+  const lines: string[] = [];
+
+  for (const word of words) {
+    const test = line ? `${line} ${word}` : word;
+    if (ctx.measureText(test).width > maxWidth && line) {
+      lines.push(line);
+      line = word;
+    } else {
+      line = test;
+    }
+  }
+  if (line) lines.push(line);
+
+  const totalHeight = lines.length * lineHeight;
+  let startY = y - totalHeight / 2;
+
+  // For left-aligned text (points), don't vertically centre
+  if (ctx.textAlign === "left") {
+    startY = y;
+  }
+
+  lines.forEach((l, i) => {
+    ctx.fillText(l, x, startY + i * lineHeight);
+  });
+}
+
+// ─── Preview slide (DOM — shows scaled-down visual) ──────────────────────────
+
+function SlidePreview({
+  slide,
+  handle,
+}: {
+  slide: Slide;
+  handle: string;
+}) {
+  if (slide.type === "cta") {
     return (
       <div
-        style={{ width: 180, height: 225, background: "hsl(var(--coral))" }}
-        className="relative rounded-xl flex flex-col items-center justify-center p-5 select-none overflow-hidden"
+        style={{ width: 180, height: 225, background: CORAL }}
+        className="relative rounded-xl flex flex-col items-center justify-center p-4 select-none overflow-hidden"
       >
-        <p className="text-white font-black text-center text-sm leading-snug">{text || "Save this. Follow @apdigital. Link in bio."}</p>
-        <p
-          style={{ bottom: 8, right: 10 }}
-          className="absolute text-white/60 text-[9px] font-bold"
-        >
+        <p className="text-white font-black text-center text-[11px] leading-snug">
+          {slide.text || "Save this. Follow @apdigital. Link in bio."}
+        </p>
+        <p className="absolute bottom-2 right-2 text-white/50 text-[8px] font-bold">
           {handle || "@apdigital"}
         </p>
       </div>
@@ -37,46 +172,40 @@ function SlideView({ type, index, text, handle }: SlideProps) {
       style={{
         width: 180,
         height: 225,
-        background: "linear-gradient(135deg, hsl(var(--navy-deep)) 0%, hsl(var(--navy)) 100%)",
-        borderTop: type === "hook" ? "4px solid hsl(var(--gold))" : undefined,
+        background: `linear-gradient(135deg, ${NAVY_DEEP} 0%, ${NAVY} 100%)`,
+        borderTop: slide.type === "hook" ? `3px solid ${GOLD}` : undefined,
       }}
-      className="relative rounded-xl flex flex-col justify-center p-5 select-none overflow-hidden"
+      className="relative rounded-xl flex flex-col justify-center p-4 select-none overflow-hidden"
     >
-      {type === "point" && index != null && (
-        <p
-          style={{ color: "hsl(var(--coral))" }}
-          className="font-black text-4xl leading-none mb-2"
-        >
-          {index}
+      {slide.type === "point" && slide.index != null && (
+        <p style={{ color: CORAL }} className="font-black text-4xl leading-none mb-1">
+          {slide.index}
         </p>
       )}
-      <p className="text-white font-bold text-sm leading-snug break-words">
-        {text || (type === "hook" ? "Your hook goes here" : `Point ${index ?? ""} goes here`)}
+      <p className="text-white font-bold text-[11px] leading-snug break-words">
+        {slide.text || (slide.type === "hook" ? "Your hook goes here" : `Point ${slide.index ?? ""} goes here`)}
       </p>
-      <p
-        style={{ bottom: 8, right: 10, color: "hsl(var(--gold)/0.6)" }}
-        className="absolute text-[9px] font-bold"
-      >
+      <p style={{ color: `${GOLD}99` }} className="absolute bottom-2 right-2 text-[8px] font-bold">
         AP Digital
       </p>
     </div>
   );
 }
 
-// ─── Main Component ────────────────────────────────────────────────────────────
+// ─── Main Component ───────────────────────────────────────────────────────────
 
 const CarouselGenerator = () => {
-  const [hook, setHook] = useState("");
-  const [points, setPoints] = useState<string[]>(["", "", "", "", ""]);
+  const [hook, setHook]       = useState("");
+  const [points, setPoints]   = useState<string[]>(["", "", "", "", ""]);
   const [ctaText, setCtaText] = useState("Save this. Follow @apdigital. Link in bio.");
-  const [handle, setHandle] = useState("@apdigital");
+  const [handle, setHandle]   = useState("@apdigital");
   const [previewed, setPreviewed] = useState(false);
 
-  // Refs for each slide (for PNG download)
-  const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
+  // Hidden canvas for PNG export
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const slides: Array<{ id: string; label: string; type: "hook" | "point" | "cta"; text: string; index?: number }> = [
-    { id: "slide-1", label: "Slide 1 — Hook", type: "hook", text: hook },
+  const slides: Slide[] = [
+    { id: "slide-1", label: "Slide 1 — Hook",  type: "hook",  text: hook },
     ...points.map((p, i) => ({
       id: `slide-${i + 2}`,
       label: `Slide ${i + 2} — Point ${i + 1}`,
@@ -87,33 +216,32 @@ const CarouselGenerator = () => {
     { id: "slide-7", label: "Slide 7 — CTA", type: "cta", text: ctaText },
   ];
 
-  const downloadSlide = async (idx: number) => {
-    const el = slideRefs.current[idx];
-    if (!el) return;
-    try {
-      const dataUrl = await toPng(el, { pixelRatio: 6 });
-      const a = document.createElement("a");
-      a.href = dataUrl;
-      a.download = `carousel-slide-${idx + 1}.png`;
-      a.click();
-    } catch (err) {
-      console.error(err);
-      alert("Could not export PNG. Try right-clicking the slide and using 'Save image as'.");
-    }
+  const downloadSlide = (slide: Slide) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    canvas.width  = W;
+    canvas.height = H;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    drawSlide(ctx, slide, handle);
+    const a = document.createElement("a");
+    a.href     = canvas.toDataURL("image/png");
+    a.download = `${slide.id}.png`;
+    a.click();
   };
 
-  const downloadAll = async () => {
-    for (let i = 0; i < slides.length; i++) {
-      await downloadSlide(i);
-    }
+  const downloadAll = () => {
+    slides.forEach((slide) => downloadSlide(slide));
   };
 
-  const updatePoint = (i: number, val: string) => {
+  const updatePoint = (i: number, val: string) =>
     setPoints((prev) => prev.map((p, idx) => (idx === i ? val : p)));
-  };
 
   return (
     <div className="min-h-screen bg-navy text-cream">
+      {/* Hidden canvas used only for PNG export */}
+      <canvas ref={canvasRef} style={{ display: "none" }} />
+
       {/* HEADER */}
       <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10 px-5 sm:px-8 py-4 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 font-extrabold">
@@ -141,16 +269,17 @@ const CarouselGenerator = () => {
           <p className="text-coral font-bold tracking-[0.2em] text-xs">TOOLS</p>
           <h1 className="mt-2 text-3xl sm:text-5xl font-black">Instagram Carousel Generator</h1>
           <p className="mt-3 text-sm text-cream/60">
-            Fill in your content, preview all 7 slides, then download each as a PNG.
+            Fill in your content, preview all 7 slides, then download each as a 1080×1350 PNG.
           </p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 items-start">
+
           {/* LEFT — INPUT FORM */}
           <div className="w-full lg:w-[40%] bg-white/5 border border-white/10 rounded-2xl p-6 flex-shrink-0">
             <h2 className="text-base font-extrabold mb-5">Content</h2>
-
             <div className="space-y-4">
+
               <div>
                 <label className="block text-xs font-bold tracking-wide text-cream/60 mb-1.5">
                   Hook / Title
@@ -210,7 +339,7 @@ const CarouselGenerator = () => {
                 className="w-full mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-gold text-navy font-extrabold text-sm px-6 py-3.5 hover:-translate-y-0.5 transition-transform duration-200 shadow-[0_10px_25px_-8px_hsl(var(--gold)/0.55)]"
               >
                 <ImageIcon className="h-4 w-4" />
-                Preview Slides &rarr;
+                Preview Slides →
               </button>
             </div>
           </div>
@@ -219,27 +348,15 @@ const CarouselGenerator = () => {
           <div className="w-full lg:w-[60%]">
             {previewed ? (
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-                {slides.map((slide, idx) => (
+                {slides.map((slide) => (
                   <div key={slide.id} className="flex flex-col items-center gap-3">
-                    <div
-                      ref={(el) => {
-                        slideRefs.current[idx] = el;
-                      }}
-                      className="flex-shrink-0"
-                    >
-                      <SlideView
-                        type={slide.type}
-                        index={slide.index}
-                        text={slide.text}
-                        handle={handle}
-                      />
-                    </div>
+                    <SlidePreview slide={slide} handle={handle} />
                     <p className="text-[10px] text-cream/40 text-center font-medium leading-tight">
                       {slide.label}
                     </p>
                     <button
                       type="button"
-                      onClick={() => downloadSlide(idx)}
+                      onClick={() => downloadSlide(slide)}
                       className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 text-cream/60 px-3 py-1.5 text-[11px] font-bold hover:border-white/40 hover:text-cream transition-colors"
                     >
                       <Download className="h-3 w-3" />
@@ -254,12 +371,10 @@ const CarouselGenerator = () => {
                   <div key={i} className="flex flex-col items-center gap-3">
                     <div
                       style={{ width: 180, height: 225 }}
-                      className="rounded-xl border-2 border-dashed border-white/15 flex flex-col items-center justify-center gap-2 bg-white/3"
+                      className="rounded-xl border-2 border-dashed border-white/15 flex flex-col items-center justify-center gap-2"
                     >
                       <ImageIcon className="h-7 w-7 text-cream/20" />
-                      <p className="text-[10px] text-cream/20 font-medium">
-                        Slide {i + 1}
-                      </p>
+                      <p className="text-[10px] text-cream/20 font-medium">Slide {i + 1}</p>
                     </div>
                     <p className="text-[10px] text-cream/20 text-center font-medium">
                       Preview will appear here
@@ -269,6 +384,7 @@ const CarouselGenerator = () => {
               </div>
             )}
           </div>
+
         </div>
       </main>
 
