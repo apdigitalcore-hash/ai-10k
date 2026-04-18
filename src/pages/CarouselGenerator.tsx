@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { toPng } from "html-to-image";
 import { Download, ImageIcon, Sparkles } from "lucide-react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -90,16 +91,14 @@ const CarouselGenerator = () => {
     const el = slideRefs.current[idx];
     if (!el) return;
     try {
-      const { toPng } = await import("html-to-image");
       const dataUrl = await toPng(el, { pixelRatio: 6 });
       const a = document.createElement("a");
       a.href = dataUrl;
       a.download = `carousel-slide-${idx + 1}.png`;
       a.click();
-    } catch {
-      alert(
-        "PNG export requires the html-to-image package. For now, right-click the slide preview and choose 'Save image as' or use a browser screenshot."
-      );
+    } catch (err) {
+      console.error(err);
+      alert("Could not export PNG. Try right-clicking the slide and using 'Save image as'.");
     }
   };
 
